@@ -3,64 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>مثال على Video.js مع ملء الشاشة</title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
 </head>
 <body>
-    <div class="slider" id="slider">
-        <div class="slides">
-            <!-- نسخ الشرائح لتظهر في النهاية -->
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 5</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 1</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 2</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 3</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 4</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 5</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04hYyWVWQLsOXqF9PDC6DynkqR5xRKpqkHw&usqp=CAU');">
-                <div class="film-info">
-                    <h2>اسم الفيلم 1</h2>
-                    <button class="watch-now">شاهد الآن</button>
-                    <button class="my-list">قائمتي</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<video
+  id="my-video"
+  class="video-js vjs-default-skin"
+  controls
+  preload="auto"
+  width="640"
+  height="264"
+  data-setup="{}">
+  <source src="https://vkvd316.okcdn.ru/?expires=1730577859268&srcIp=156.203.178.220&pr=40&srcAg=CHROME_ANDROID&ms=185.226.53.153&type=1&sig=ZK-lo6FqBnE&ct=0&urls=45.136.20.183&clientType=14&appId=512000384397&id=7128999725795" type="video/mp4" />
+  <source src="YOUR_VIDEO_URL.webm" type="video/webm" />
+  <p class="vjs-no-js">
+    لتشغيل هذا الفيديو، يرجى تشغيل JavaScript وإعادة تحميل الصفحة.
+  </p>
+</video>
+
 </body>
 </html>
