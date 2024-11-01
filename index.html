@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مثال على Video.js مع ملء الشاشة</title>
-    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <title>مشغل فيديو باستخدام Plyr</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 <body>
 
-<video
-  id="my-video"
-  class="video-js vjs-default-skin"
-  controls
-  preload="auto"
-  width="640"
-  height="264"
-  data-setup="{}">
-  <source src="https://vkvd316.okcdn.ru/?expires=1730633871467&srcIp=156.203.252.150&pr=40&srcAg=CHROME_ANDROID&ms=185.226.53.153&type=1&sig=U5oVO4u6pqM&ct=0&urls=45.136.20.183&clientType=14&appId=512000384397&id=7128999725795" type="video/mp4" />
-  <source src="YOUR_VIDEO_URL.webm" type="video/webm" />
-  <p class="vjs-no-js">
-    لتشغيل هذا الفيديو، يرجى تشغيل JavaScript وإعادة تحميل الصفحة.
-  </p>
-</video>
+    <video id="player" controls crossorigin playsinline>
+        <source src="https://vkvd316.okcdn.ru/?expires=1730665395702&srcIp=156.203.252.150&pr=40&srcAg=CHROME_ANDROID&ms=185.226.53.153&type=1&sig=zEhdQvMJ6LI&ct=0&urls=45.136.20.183&clientType=14&appId=512000384397&id=7128999725795" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
 
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        const player = new Plyr('#player', {
+            // خيارات التهيئة هنا
+        });
+    </script>
 </body>
 </html>
