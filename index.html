@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشغل فيديو باستخدام Plyr</title>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <title>مشغل فيديو باستخدام MediaElement.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
 </head>
 <body>
 
-    <video id="player" controls crossorigin playsinline>
-        <source src="https://vkvd316.okcdn.ru/?expires=1730665395702&srcIp=156.203.252.150&pr=40&srcAg=CHROME_ANDROID&ms=185.226.53.153&type=1&sig=zEhdQvMJ6LI&ct=0&urls=45.136.20.183&clientType=14&appId=512000384397&id=7128999725795" type="video/mp4" />
-        Your browser does not support HTML5 video.
+    <video id="player" width="640" height="360" controls>
+        <source src="https://vkvd316.okcdn.ru/?expires=1730665395702&srcIp=156.203.252.150&pr=40&srcAg=CHROME_ANDROID&ms=185.226.53.153&type=1&sig=zEhdQvMJ6LI&ct=0&urls=45.136.20.183&clientType=14&appId=512000384397&id=7128999725795" type="video/mp4">
+        <p>متصفحك لا يدعم تشغيل الفيديو.</p>
     </video>
 
-    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
     <script>
-        const player = new Plyr('#player', {
-            // خيارات التهيئة هنا
-        });
+        const player = new MediaElementPlayer('player');
     </script>
 </body>
 </html>
